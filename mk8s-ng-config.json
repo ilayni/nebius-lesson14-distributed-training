@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "id": "mk8snodegroup-e00ywj73s73636tsdg",
+    "parent_id": "mk8scluster-e00p5rmnhchxddhpt1",
+    "name": "ddp-ng-ilay-nisim",
+    "resource_version": "1",
+    "created_at": "2026-05-24T04:17:49Z",
+    "updated_at": "2026-05-24T04:17:49Z"
+  },
+  "spec": {
+    "version": "1.33",
+    "fixed_node_count": "2",
+    "template": {
+      "resources": {
+        "platform": "gpu-h100-sxm",
+        "preset": "1gpu-16vcpu-200gb"
+      },
+      "boot_disk": {
+        "size_gibibytes": "279",
+        "block_size_bytes": "4096",
+        "type": "NETWORK_SSD"
+      },
+      "gpu_settings": {
+        "drivers_preset": "cuda13.0"
+      },
+      "os": "ubuntu24.04",
+      "network_interfaces": [
+        {
+          "public_ip_address": {},
+          "subnet_id": "vpcsubnet-e00twftr6t04zjqs9b"
+        }
+      ],
+      "cloud_init_user_data": "users:\n - name: ilayn\n   sudo: ALL=(ALL) NOPASSWD:ALL\n   shell: /bin/bash\n   ssh_authorized_keys:\n    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIML30In7Sin1cae8VyfC0mKl7EcyoMxQEk92TXfasKmZ nebius cloud ssh key",
+      "service_account_id": "serviceaccount-e00g89xvk3y5w4tfyy",
+      "reservation_policy": {}
+    }
+  }
+}

@@ -1,0 +1,60 @@
+# ----- Personal notes and infra scripts with tenant/project IDs -----
+asgmnt_plan.md
+asgnmet_breif.md
+asgmnt_env.md
+create_build_vm.sh
+delete_build_vm.sh
+delete_cluster.sh
+delete_skypilot_job.sh
+
+# ----- Internal transfer docs and redundant logs -----
+docker_image_transfer.md
+training_log_1.txt
+
+# ----- Build artifacts -----
+submission/
+
+# ----- Private tenant / test environment -----
+# Contains tenant/project/cluster/subnet IDs and VM IPs from the dry-run
+private_tenant/
+
+# ----- Potential secrets (safety net — none present today) -----
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+secrets/
+**/iam-token*
+**/access-token*
+
+# ----- Nebius / cloud CLI configs (in case they get copied here) -----
+.nebius/
+.kube/
+kubeconfig*
+
+# ----- Docker config backups -----
+.docker-nebius/
+config.json.bak.*
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ----- IDE / OS -----
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# ----- Misc -----
+*.log
+*.bak
